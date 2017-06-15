@@ -4,7 +4,7 @@ The compilation is performed within a Docker image named build-rpi.
 
 ## Clone the project
 Project includes submodules to the Yocto core, openembedded, raspberry pi BSP and custom layers: meta-iot, meta-app.
-To clone the projec with submodules:
+To clone the project with submodules:
 ```
 git clone --recursive https://github.com/rdoumenc/rpi.git
 ```
@@ -12,7 +12,7 @@ git clone --recursive https://github.com/rdoumenc/rpi.git
 ```
 make build
 ```
-## Run the docker image
+## Run compilation within the docker image
 ```
 make run
 ```
