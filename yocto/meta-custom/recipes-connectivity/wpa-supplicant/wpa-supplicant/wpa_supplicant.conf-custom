@@ -1,0 +1,10 @@
+ctrl_interface=/var/run/wpa_supplicant
+ctrl_interface_group=0
+update_config=1
+
+network={
+	ssid="SSID"
+        key_mgmt=WPA-PSK
+	pairwise=CCMP TKIP
+	psk=adbfa3572d46b40be32992926e9b8d3db13984184555b0cd81979d33854e8bd7
+}

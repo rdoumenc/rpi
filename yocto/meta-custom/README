@@ -1,0 +1,62 @@
+This layer provides custom configuration for the Raspberry Pi image
+
+
+Sources
+=======
+
+rpi
+
+  URI: git://github.com/rdoumenc/rpi.git
+  branch: master
+
+
+Dependencies
+============
+
+This layer depends on:
+
+  URI: git://git.yoctoproject.org/poky.git
+  branch: master
+
+  URI: git://github.com/rdoumenc/meta-iot.git
+  branch: master
+
+  URI: git://github.com/rdoumenc/meta-app.git
+  branch: master
+
+
+Patches
+=======
+
+To contribute to this layer you should submit the patches for review to:
+the github pull-request facility directly.
+
+Maintainer: Rémi Doumenc <remi.doumenc@gmail.com>
+
+
+Table of Contents
+=================
+
+  I. Adding the custom layer to your build
+
+
+I. Adding the custom layer to your build
+=================================================
+
+In order to use this layer, you need to make the build system aware of
+it.
+
+Assuming the custom layer exists at the top-level of your
+yocto build tree, you can add it to the build system by adding the
+location of the custom layer to bblayers.conf, along with any
+other layers needed. e.g.:
+
+  BBLAYERS ?= " \
+    /path/to/yocto/meta \
+    /path/to/yocto/meta-poky \
+    /path/to/yocto/meta-yocto-bsp \
+    /path/to/yocto/meta-iot \
+    /path/to/yocto/meta-app \
+    /path/to/yocto/meta-custom \
+    "
+
