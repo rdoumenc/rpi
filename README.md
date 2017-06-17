@@ -8,6 +8,9 @@ To clone the project with submodules:
 ```
 git clone --recursive https://github.com/rdoumenc/rpi.git
 ```
+## Dependencies
+Docker must be installed.
+
 ## Build the docker image
 ```
 make build
