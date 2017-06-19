@@ -16,7 +16,7 @@
 	branch = morty
 [submodule "yocto/meta-app"]
 	path = yocto/meta-app
-	url = https://github.com/rdoumenc/meta-app.git
+	url = https://gitlab.com/rdoumenc/meta-app.git
 [submodule "yocto/meta-iot"]
 	path = yocto/meta-iot
-	url = https://github.com/rdoumenc/meta-iot.git
+	url = https://gitlab.com/rdoumenc/meta-iot.git
