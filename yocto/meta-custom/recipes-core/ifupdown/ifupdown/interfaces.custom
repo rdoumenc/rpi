@@ -1,0 +1,14 @@
+auto lo
+iface lo inet loopback
+
+auto eth0
+allow-hotplug eth0
+iface eth0 inet manual
+  pre-up /sbin/udhcpc -R -b -i eth0
+
+auto wlan0
+allow-hotplug wlan0
+iface wlan0 inet manual
+  pre-up /sbin/udhcpc -R -b -i wlan0
+  wpa-driver wext
+  wpa-conf /etc/wpa_supplicant.conf
