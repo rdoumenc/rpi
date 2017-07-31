@@ -4,7 +4,7 @@ LICENSE = "MIT"
 
 inherit core-image
 
-IMAGE_FEATURE += "ssh-server-dropbear"
+IMAGE_FEATURES += "ssh-server-dropbear"
 
 IMAGE_INSTALL = "${ROOTFS_PKGMANAGE_BOOTSTRAP} \
                  ${CORE_IMAGE_EXTRA_INSTALL} \
