@@ -1,4 +1,4 @@
-SUMMARY = "A small image based on core-image-minimal."
+SUMMARY = "A small image based on core-image-minimal with Qt support."
 
 LICENSE = "MIT"
 
@@ -6,15 +6,34 @@ inherit core-image
 
 IMAGE_FEATURES += "ssh-server-dropbear"
 
-IMAGE_INSTALL = "${ROOTFS_PKGMANAGE_BOOTSTRAP} \
-                 ${CORE_IMAGE_EXTRA_INSTALL} \
-                 packagegroup-core-boot \
-                 kernel-modules \
-                 wpa-supplicant \
-                 iw \
-                 mosquitto \
-                 arhome \
-                "
+IMAGE_INSTALL  = " \
+                  ${ROOTFS_PKGMANAGE_BOOTSTRAP} \
+                  ${CORE_IMAGE_EXTRA_INSTALL} \
+                  packagegroup-core-boot \
+                  kernel-modules \
+                  wpa-supplicant \
+                  iw \
+                  mosquitto \
+                  arhome \
+                 "
+
+# Qt Packages
+IMAGE_INSTALL += " \
+                  qtbase \
+                  qtbase-plugins \
+                  qtdeclarative \
+                  qtdeclarative-plugins \
+                  qtdeclarative-qmlplugins \
+                  qtdeclarative-tools \
+                  qtmultimedia \
+                  qtmultimedia-plugins \
+                  qtmultimedia-qmlplugins \
+                  qtwebkit \
+                  qtwebkit-qmlplugins \
+                  qtsvg \
+                  qtsvg-plugins \
+                  liberation-fonts \
+                 "
 
 IMAGE_LINGUAS = " "
 
