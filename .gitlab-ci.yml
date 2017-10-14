@@ -1,5 +1,10 @@
 image: rdoumenc/build-rpi
 build:
   script:
+  - ls
+  - pwd
+  - env
+  - uname -a
+  - ls /
   - source ./yocto/poky/oe-init-build-env ./build
   - bitbake rpi-custom-image
