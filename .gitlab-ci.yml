@@ -1,12 +1,9 @@
-image:
-  - name: rdoumenc/build-rpi
-  - entrypoint: /bin/bash
+image: docker:git
+services:
+- docker:dind
+before_script:
+  - apt-get -qq update && apt-get -qq install -y make
 build:
   script:
-  - ls
-  - pwd
-  - env
-  - uname -a
-  - ls /
-  - mkdir build
-  - source /workspace/yocto/poky/oe-init-build-env /workspace/build && bitbake rpi-custom-image
+  - make build
+  - make run
