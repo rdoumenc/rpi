@@ -1,6 +1,5 @@
 image: docker
 build:
-  image: rdoumenc/build-rpi
   script:
   - ls
   - pwd
