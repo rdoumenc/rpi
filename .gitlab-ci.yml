@@ -1,6 +1,8 @@
 image: docker:git
 services:
 - docker:dind
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
 before_script:
   - apk update && apk add make
 build:
