@@ -1,6 +1,4 @@
-image: docker
-before_script:
-  - apt-get install -y make
+image: rdoumenc/build-rpi
 build:
   script:
   - ls
@@ -8,4 +6,5 @@ build:
   - env
   - uname -a
   - ls /
-  - make run
+  - mkdir build
+  - source ./yocto/poky/oe-init-build-env ./build && bitbake rpi-custom-image
