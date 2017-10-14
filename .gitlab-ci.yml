@@ -1,4 +1,4 @@
-image: build-rpi
+image: rdoumenc/build-rpi
 build:
   script:
   - source ./yocto/poky/oe-init-build-env ./build
