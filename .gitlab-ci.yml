@@ -1,4 +1,5 @@
+image: build-rpi
 build:
   script:
-  - make build
-  - make run
+  - source ./yocto/poky/oe-init-build-env ./build
+  - bitbake rpi-custom-image
