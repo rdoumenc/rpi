@@ -5,8 +5,5 @@ before_script:
   - apk update && apk add make
 build:
   script:
-  - ls -al yocto
-  - cat /etc/passwd
-  - pwd
-  #- make build
-  #- make run
+  - make build
+  - make run
