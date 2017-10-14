@@ -6,5 +6,7 @@ before_script:
 build:
   script:
   - ls -al yocto
-  - make build
-  - make run
+  - cat /etc/passwd
+  - pwd
+  #- make build
+  #- make run
