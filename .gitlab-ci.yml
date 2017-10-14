@@ -6,4 +6,5 @@ build:
   - env
   - uname -a
   - ls /
+  - apt-get install -y make
   - make run
