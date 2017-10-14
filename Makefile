@@ -15,7 +15,7 @@ run:
 	    mkdir $(BUILD_DIR); \
 	    cp -r $(YOCTO_DIR)/build_template/* $(BUILD_DIR); \
 	  fi
-	@ docker run -ti --volume=$(CDIR)/yocto:/workspace/yocto \
+	@ docker run -t --volume=$(CDIR)/yocto:/workspace/yocto \
 	  --volume=$(BUILD_DIR):/workspace/build -e LOCAL_USER_ID=$(USER_ID) build-rpi \
 	  /bin/bash -c 'source /workspace/yocto/poky/oe-init-build-env /workspace/build && bitbake rpi-custom-image'
 
