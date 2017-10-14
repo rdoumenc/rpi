@@ -2,7 +2,7 @@ image: docker:git
 services:
 - docker:dind
 before_script:
-  - apt-get -qq update && apt-get -qq install -y make
+  - apk update && apk add make
 build:
   script:
   - make build
