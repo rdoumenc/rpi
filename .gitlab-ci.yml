@@ -1,3 +1,4 @@
+image: docker:git
 build:
   image: rdoumenc/build-rpi
   script:
