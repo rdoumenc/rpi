@@ -17,7 +17,7 @@ run:
 	  fi
 	@ docker run -t --volume=$(CDIR)/yocto:/workspace/yocto \
 	  --volume=$(BUILD_DIR):/workspace/build build-rpi \
-	  /bin/bash -c 'ls -al && ls -al / && pwd && source /workspace/yocto/poky/oe-init-build-env /workspace/build && bitbake rpi-custom-image'
+	  /bin/bash -c 'ls -al && ls -al /workspace && ls -al /workspace/yocto && ls -al /workspace/yocto/poky && pwd && source /workspace/yocto/poky/oe-init-build-env /workspace/build && bitbake rpi-custom-image'
 
 run-shell:
 	@ docker run -ti --volume=$(CDIR)/yocto:/workspace/yocto \
