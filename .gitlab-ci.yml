@@ -1,4 +1,6 @@
-image: rdoumenc/build-rpi ENTRYPOINT=/bin/bash
+image:
+  - name: rdoumenc/build-rpi
+  - entrypoint: /bin/bash
 build:
   script:
   - ls
