@@ -5,6 +5,6 @@ before_script:
   - apk update && apk add make
 build:
   script:
-  - ls -al
-#  - make build
-#  - make run
+  - ls -al yocto
+  - make build
+  - make run
