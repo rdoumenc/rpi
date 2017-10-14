@@ -1,5 +1,0 @@
-[[runners]]
-  [runners.docker]
-    image = "build-rpi"
-    privileged = false
-    volumes = ["./build:/workspace/build"]
