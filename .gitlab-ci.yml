@@ -1,4 +1,6 @@
 image: docker
+before_script:
+  - apt-get install -y make
 build:
   script:
   - ls
@@ -6,5 +8,4 @@ build:
   - env
   - uname -a
   - ls /
-  - apt-get install -y make
   - make run
