@@ -7,4 +7,4 @@ build:
   - uname -a
   - ls /
   - mkdir build
-  - source ./yocto/poky/oe-init-build-env ./build && bitbake rpi-custom-image
+  - source /workspace/yocto/poky/oe-init-build-env /workspace/build && bitbake rpi-custom-image
