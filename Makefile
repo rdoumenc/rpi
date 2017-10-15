@@ -13,6 +13,7 @@ build:
 run:
 	@ if [ ! -d $(BUILD_DIR) ]; then \
 	    mkdir $(BUILD_DIR); \
+	    chmod 777 $(BUILD_DIR); \
 	    cp -r $(YOCTO_DIR)/build_template/* $(BUILD_DIR); \
 	  fi
 	@ docker run -t --volume=$(CDIR)/yocto:/workspace/yocto \
