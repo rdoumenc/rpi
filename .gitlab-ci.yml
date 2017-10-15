@@ -7,8 +7,8 @@ before_script:
   - apk update && apk add make
 build:
   script:
-  ls -al
-  env
-  whoami
+  - ls -al
+  - env
+  - whoami
   #- make build
   #- make run
