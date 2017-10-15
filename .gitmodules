@@ -12,7 +12,7 @@
 	branch = morty
 [submodule "yocto/meta-qt5"]
 	path = yocto/meta-qt5
-	url = https://github.com/meta-qt5/meta-qt5.git
+	url = git://github.com/meta-qt5/meta-qt5.git
 	branch = morty
 [submodule "yocto/meta-app"]
 	path = yocto/meta-app
