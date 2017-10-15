@@ -1,3 +1,5 @@
+[![pipeline status](https://gitlab.com/rdoumenc/rpi/badges/master/pipeline.svg)](https://gitlab.com/rdoumenc/rpi/commits/master)
+
 # Raspberry Pi Yocto configuration
 Custom configuration to build Linux image for Raspberry Pi using the Yocto project.
 The compilation is performed within a Docker image named build-rpi.
