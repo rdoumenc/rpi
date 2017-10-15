@@ -9,6 +9,5 @@ build:
   script:
   - ls -al
   - env
-  - whoami
-  #- make build
-  #- make run
+  - make build
+  - make run
