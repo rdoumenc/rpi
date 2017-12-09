@@ -15,4 +15,4 @@ build:
   - env
   - sed '1,4 {s/^/#/}' -i ./yocto/meta-app/recipes-core/images/rpi-custom-image.bbappend
   - make build
-  - make run
+  - make run-docker

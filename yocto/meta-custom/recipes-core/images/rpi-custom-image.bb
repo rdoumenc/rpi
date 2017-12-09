@@ -4,36 +4,27 @@ LICENSE = "MIT"
 
 inherit core-image
 
-IMAGE_FEATURES += "ssh-server-dropbear"
+IMAGE_FEATURES += "splash ssh-server-dropbear hwcodecs"
 
-IMAGE_INSTALL  = " \
-                  ${ROOTFS_PKGMANAGE_BOOTSTRAP} \
-                  ${CORE_IMAGE_EXTRA_INSTALL} \
-                  packagegroup-core-boot \
-                  kernel-modules \
-                  wpa-supplicant \
-                  iw \
-                  mosquitto \
-                  arhome \
-                 "
+IMAGE_INSTALL = " \
+  ${ROOTFS_PKGMANAGE_BOOTSTRAP} \
+  ${CORE_IMAGE_EXTRA_INSTALL} \
+  packagegroup-core-boot \
+  kernel-modules \
+  wpa-supplicant \
+  iw \
+  mosquitto \
+  kernel-module-brcmfmac \
+	kernel-module-rpi-ft5406 \
+  kernel-module-evdev \
+	kernel-module-rpi-backlight \
+  wayland weston \
+"
 
-# Qt Packages
-IMAGE_INSTALL += " \
-                  qtbase \
-                  qtbase-plugins \
-                  qtdeclarative \
-                  qtdeclarative-plugins \
-                  qtdeclarative-qmlplugins \
-                  qtdeclarative-tools \
-                  qtmultimedia \
-                  qtmultimedia-plugins \
-                  qtmultimedia-qmlplugins \
-                  qtwebkit \
-                  qtwebkit-qmlplugins \
-                  qtsvg \
-                  qtsvg-plugins \
-                  liberation-fonts \
-                 "
+CORE_IMAGE_BASE_INSTALL += "weston weston-init weston-examples"
+
+DISTRO_FEATURES_append = " opengl wayland"
+DISTRO_FEATURES_remove = " x11"
 
 IMAGE_LINGUAS = " "
 

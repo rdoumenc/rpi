@@ -2,11 +2,11 @@ auto lo
 iface lo inet loopback
 
 auto eth0
-iface eth0 inet static
+iface eth0 inet dhcp
   post-up /sbin/udhcpc -R -b -i eth0
 
 auto wlan0
-iface wlan0 inet static
+iface wlan0 inet dhcp
   post-up /sbin/udhcpc -R -b -i wlan0
   wpa-driver wext
   wpa-conf /etc/wpa_supplicant.conf
