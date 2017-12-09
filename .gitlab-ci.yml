@@ -8,10 +8,6 @@ before_script:
 build:
   script:
   - ls -al
-  - ls -al ./yocto
-  - ls -al ./yocto/meta-app
-  - ls -al ./yocto/meta-app/recipes-core
-  - ls -al ./yocto/meta-app/recipes-core/images
   - env
   - sed '1,4 {s/^/#/}' -i ./yocto/meta-app/recipes-core/images/rpi-custom-image.bbappend
   - make build
